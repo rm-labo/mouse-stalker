@@ -13,3 +13,4 @@ babel.config.js
 .prettierrc.json
 .eslintrc.json
 .eslintignore
+.nojekyll
