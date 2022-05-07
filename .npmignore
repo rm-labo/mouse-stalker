@@ -1,8 +1,10 @@
+.github
 .prettierignore
 .stylelintrc.json
 .gitignore
 src/
 docs/
+docs-src/
 coverage/
 tsconfig.json
 webpack.config.js
