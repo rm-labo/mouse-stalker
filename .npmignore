@@ -14,3 +14,4 @@ babel.config.js
 .eslintrc.json
 .eslintignore
 .nojekyll
+dist/**/*.spec.*
