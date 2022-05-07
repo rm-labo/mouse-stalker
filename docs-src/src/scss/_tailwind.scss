@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pointer-coarse-only {
+  display: none;
+  @media (pointer: coarse) {
+    display: block;
+  }
+}
