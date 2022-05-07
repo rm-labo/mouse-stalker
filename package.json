@@ -1,6 +1,6 @@
 {
   "name": "@rm-labo/mouse-stalker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mouse stalker with simple round design.",
   "main": "./dist/js/index.js",
   "types": "./dist/js/index.d.ts",
