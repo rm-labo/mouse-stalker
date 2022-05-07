@@ -10,6 +10,7 @@ module.exports = {
       white: '#ffffff',
       // gray: colors.gray,
       slate: colors.slate,
+      indigo: colors.indigo,
     },
     extend: {},
   },

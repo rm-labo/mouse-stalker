@@ -8,6 +8,9 @@
 | ![Statements](https://img.shields.io/badge/statements-6.89%25-red.svg?style=flat) | ![Branches](https://img.shields.io/badge/branches-13.33%25-red.svg?style=flat) | ![Functions](https://img.shields.io/badge/functions-3.33%25-red.svg?style=flat) | ![Lines](https://img.shields.io/badge/lines-6.66%25-red.svg?style=flat) |
 
 
+This library is intended for pointing devices only.
+It does not affect any display on touch devices.
+
 ## Demo
 
 demo page is [here](http://rm-labo.github.io/mouse-stalker/)
