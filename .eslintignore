@@ -1,0 +1,8 @@
+.*.js
+.*.json
+.cache/
+.gitignore
+dist/
+node_modules/
+bs-config.js
+docs/

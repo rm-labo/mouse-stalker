@@ -1,0 +1,302 @@
+doctype html
+html(lang="ja")
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no")
+      title mouse-stalker
+      meta(name="author" content="@rm-labo")
+      link(href="//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet")
+      link(rel="stylesheet" type="text/css" href=`../scss/main.scss`)
+  body
+    article(class="text-black pb-36")
+      section(class="text-center text-sm py-16 md:py-36")
+        div(class="max-w-4xl mx-auto")
+          h1(class="text-6xl md:text-8xl font-thin mb-4") mouse-stalker
+          p(class="my-4") Mouse stalker with simple round design.
+          a(
+            class="inline-block border-2 border-black px-8 py-4 text-xl no-underline hover:bg-black hover:text-white"
+            href='https://www.npmjs.com/package/@rm-labo/mouse-stalker'
+            target='_blank'
+            data-st-target=""
+            data-st-icon-name="icomoon-free:npm"
+            )
+            span(class="iconify-inline text-xl" data-icon='icomoon-free:npm' data-inline="true")
+            span(class="ml-2")
+              small GETTING STARTED
+          p(class="mt-4")
+            | The latest source code is available on 
+            a(href='https://github.com/rm-labo/mouse-stalker' data-st-target="" data-st-icon-name="ion:logo-github") 
+              span(class="iconify-inline mr-1" data-icon='ion:logo-github' data-inline="true")
+              | github
+            | .
+      div
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            h2(class="text-6xl font-thin mb-4") Install
+            div(class="text-left")
+              pre
+                code(class="rounded-lg language-bash")
+                  | $ npm i -D @rm-labo/mouse-stalker
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            section
+              h2(class="text-6xl font-thin mb-8") Usage
+              div(class="p-6 md:py-8 md:px-8 bg-slate-100 rounded-lg")
+                div(class="text-left mt-4 mb-8")
+                  textarea(rows="12" readonly class="mt-1 block w-full pl-3 pr-10 py-2 text-sm border-slate-300 rounded-md" id="option-demo-code")
+                div(class="text-left grid grid-cols-2 sm:grid-cols-5 gap-4")
+                  div
+                    label.block.text-sm.font-medium.text-slate-400 pageBaseColor
+                    .mt-1
+                      div(data-color-picker="pageBaseColor")
+                  div
+                    label.block.text-sm.font-medium.text-slate-400 pointerColor
+                    .mt-1
+                      div(data-color-picker="pointerColor")
+                  div
+                    label.block.text-sm.font-medium.text-slate-400(for='pointerSize') pointerSize
+                    .mt-1.relative.rounded-md
+                      input#pointerSize.block.w-full.pr-8.border-slate-300.rounded-md(
+                        data-value-picker="pointerSize"
+                        class='focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-xs'
+                        type='number'
+                        name='pointerSize'
+                        min="0"
+                        aria-describedby='pointerSize-unit'
+                        value="24"
+                      )
+                      .absolute.inset-y-0.right-0.pr-2.flex.items-center.pointer-events-none
+                        span#pointerSize-unit.text-slate-300(class='sm:text-xs') px
+                  div
+                    label.block.text-sm.font-medium.text-slate-400(for='hoveringExpansionRatio') hoveringExpansionRatio
+                    .mt-1.relative.rounded-md
+                      input#hoveringExpansionRatio.block.w-full.border-slate-300.rounded-md(
+                        data-value-picker="hoveringExpansionRatio"
+                        class='focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-xs'
+                        type='number'
+                        name='hoveringExpansionRatio'
+                        min="0"
+                        value="2"
+                      )
+                  div
+                    label.block.text-sm.font-medium.text-slate-400(for='hoveringBorderWidth') hoveringBorderWidth
+                    .mt-1.relative.rounded-md
+                      input#hoveringBorderWidth.block.w-full.border-slate-300.rounded-md(
+                        data-value-picker="hoveringBorderWidth"
+                        class='focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-xs'
+                        type='number'
+                        name='hoveringBorderWidth'
+                        min="0"
+                        value="1"
+                      )
+            section(class="mt-12 rounded-lg")
+              h2(class="text-6xl font-thin mb-8") hover effects sample
+              div(class="mt-8 p-6 md:py-8 md:px-8 bg-slate-100 rounded-lg")
+                div(class="grid grid-cols-4 gap-4")
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='') No Icon (Default)
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='bxs:cat') Cat
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='akar-icons:heart') Heart
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='ri:zoom-in-line' data-st-icon-animation-name='default') Zoom In
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='fa-solid:arrow-left' data-st-icon-animation-name='toLeft') Left Arrow
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='fa-solid:arrow-up' data-st-icon-animation-name='toTop') Up Arrow
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='fa-solid:arrow-down' data-st-icon-animation-name='toBottom') Down Arrow
+                  button(class="p-2 text-sm bg-white rounded-lg" data-st-target='' data-st-icon-name='fa-solid:arrow-right' data-st-icon-animation-name='toRight') Right Arrow
+              div.mt-8
+                pre
+                  code(class="rounded-lg language-html text-xs text-left")
+                    :escape-html
+                      <button data-st-target>No Icon (Default)</button>
+                      <button data-st-target data-st-icon-name="bxs:cat">Cat</button>
+                      <button data-st-target data-st-icon-name="akar-icons:heart">Heart</button>
+                      <button data-st-target data-st-icon-name="ri:zoom-in-line">Zoom In</button>
+                      <button data-st-target data-st-icon-name="fa-solid:arrow-left" data-st-icon-animation-name="toLeft">Left Arrow</button>
+                      <button data-st-target data-st-icon-name="fa-solid:arrow-up" data-st-icon-animation-name="toTop">Up Arrow</button>
+                      <button data-st-target data-st-icon-name="fa-solid:arrow-down" data-st-icon-animation-name="toBottom">Down Arrow</button>
+                      <button data-st-target data-st-icon-name="fa-solid:arrow-right" data-st-icon-animation-name="toRight">Right Arrow</button>
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            h2(class="text-6xl font-thin mb-4") Methods
+            div(class="text-left")
+              table
+                thead
+                  tr
+                    th Method
+                    th 
+                tbody
+                  tr 
+                    th
+                      code MouseStalker.init(opt)
+                    td Show MouseStalker
+                  tr 
+                    th
+                      code MouseStalker.destroy()
+                    td Remove MouseStalker 
+                  tr 
+                    th
+                      code MouseStalker.update(opt)
+                    td Update MouseStalker with opt
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            h2(class="text-6xl font-thin mb-8") Options
+            div(class="text-left")
+              table
+                thead
+                  tr
+                    th Option
+                    th Type
+                    th Default
+                tbody
+                  tr
+                    th
+                      code mouseElementClassName
+                    td
+                      code string
+                    td
+                      code mouse-stalker-root
+                  tr
+                    th
+                      code pointerElementClassName    
+                    td
+                      code string  
+                    td
+                      code mouse-stalker-pointer                  
+                  tr
+                    th
+                      code iconTargetElementClassName 
+                    td
+                      code string  
+                    td
+                      code mouse-stalker-icon-target              
+                  tr
+                    th
+                      code pageBaseColor              
+                    td
+                      code string  
+                    td
+                      code #ffffff                                
+                  tr
+                    th
+                      code pointerColor               
+                    td
+                      code string  
+                    td
+                      code rgba(0,0,0,1)                          
+                  tr
+                    th
+                      code pointerSize                
+                    td
+                      code number  
+                    td
+                      code 24                                                                 
+                  tr
+                    th
+                      code zIndex                     
+                    td
+                      code string  
+                    td
+                      code 9999                                   
+                  tr
+                    th
+                      code hoveringExpansionRatio     
+                    td
+                      code number  
+                    td
+                      code 2                                      
+                  tr
+                    th
+                      code hoveringBorderWidth
+                    td
+                      code number  
+                    td
+                      code 1                                      
+                  tr
+                    th
+                      code scoped                     
+                    td
+                      code boolean 
+                    td
+                      code false                                  
+                  tr
+                    th
+                      code targetSelectorsDataName    
+                    td
+                      code string  
+                    td
+                      code data-st-target              
+                  tr
+                    th
+                      code hoveringIconName           
+                    td
+                      code string  
+                    td
+                      code data-st-icon-name           
+                  tr
+                    th
+                      code hoveringIconAnimationName  
+                    td
+                      code string  
+                    td
+                      code data-st-icon-animation-name
+                      br
+                      br
+                      | (This attribute accepts are 
+                      code toTop
+                      | , 
+                      code toBottom
+                      | , 
+                      code toRight
+                      | , and
+                      code toLeft
+                      | )
+
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            h2(class="text-6xl font-thin mb-8") Notes on background color
+            div(class="text-left")
+              p 
+                | The 
+                code mix-blend-mode
+                | is used to draw the mouse pointer.
+                | Therefore, 
+                code background-color
+                | must be specified in the 
+                code body
+                | tag.
+              div.my-4
+                pre
+                  code(class="rounded-lg language-scss")
+                    | body {
+                    |   background-color: white; // must be specified
+                    | }
+              p 
+                | Note that 
+                code Option.pageBaseColor
+                | is output for this background color.
+                    
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            h2(class="text-6xl font-thin mb-8") Licence
+            div(class="text-left")
+              p 
+                | Licensed under MIT license.
+                | You are free to use for your personal or commercial projects.
+                | However, this program is based on iconify.design and has been extended.
+                | Please refer to iconify.design for the license of each icon used internally.
+
+        section(class="px-4 py-8 text-center")
+          div(class="max-w-4xl mx-auto")
+            h2(class="text-6xl font-thin mb-8") Release notes
+            div(class="text-left")
+              table
+                thead
+                  tr
+                    th Version
+                    th Description
+                tbody
+                  tr
+                    td 
+                      code 1.0.0
+                    td Launch
+
+    script(type="module" src=`../ts/index.ts`)

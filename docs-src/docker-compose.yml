@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+
+  web:
+    build: ./docker/web
+    volumes:
+      - ../docs:/var/www/html
+
+  nginx:
+    build: ./docker/nginx
+    volumes:
+      - ../docs:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - web
