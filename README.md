@@ -15,7 +15,7 @@ demo page is [here](http://rm-labo.github.io/mouse-stalker/)
 ## Install
 
 ```bash
-$ npm i -D @rm-labo/mouse-stalker
+$ npm i @rm-labo/mouse-stalker
 ```
 
 ## Usage
