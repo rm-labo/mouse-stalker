@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+    <title>mouse-stalker</title>
+    <meta name="author" content="@rm-labo">
+    <link href="//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../scss/main.scss">
+  <link href="./assets/css/main.css" rel="stylesheet"></head>
+  <body>
+    <article class="text-black pb-36">
+      <section class="text-center text-sm py-16 md:py-36">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-6xl md:text-8xl font-thin mb-4">mouse-stalker</h1>
+          <p class="my-4">Mouse stalker with simple round design.</p><a class="inline-block border-2 border-black px-8 py-4 text-xl no-underline hover:bg-black hover:text-white" href="https://www.npmjs.com/package/@rm-labo/mouse-stalker" target="_blank" data-st-target="" data-st-icon-name="icomoon-free:npm"><span class="iconify-inline text-xl" data-icon="icomoon-free:npm" data-inline="true"></span><span class="ml-2"><small>GETTING STARTED</small></span></a>
+          <p class="mt-4">The latest source code is available on <a href="https://github.com/rm-labo/mouse-stalker" data-st-target="" data-st-icon-name="ion:logo-github"> <span class="iconify-inline mr-1" data-icon="ion:logo-github" data-inline="true"></span>github</a>.</p>
+        </div>
+      </section>
+      <div>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-thin mb-4">Install</h2>
+            <div class="text-left">
+              <pre><code class="rounded-lg language-bash">$ npm i -D @rm-labo/mouse-stalker</code></pre>
+            </div>
+          </div>
+        </section>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <section>
+              <h2 class="text-6xl font-thin mb-8">Usage</h2>
+              <div class="p-6 md:py-8 md:px-8 bg-slate-100 rounded-lg">
+                <div class="text-left mt-4 mb-8">
+                  <textarea class="mt-1 block w-full pl-3 pr-10 py-2 text-sm border-slate-300 rounded-md" rows="12" readonly id="option-demo-code"></textarea>
+                </div>
+                <div class="text-left grid grid-cols-2 sm:grid-cols-5 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium text-slate-400">pageBaseColor</label>
+                    <div class="mt-1">
+                      <div data-color-picker="pageBaseColor"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-400">pointerColor</label>
+                    <div class="mt-1">
+                      <div data-color-picker="pointerColor"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-400" for="pointerSize">pointerSize</label>
+                    <div class="mt-1 relative rounded-md">
+                      <input class="block w-full pr-8 border-slate-300 rounded-md focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-xs" id="pointerSize" data-value-picker="pointerSize" type="number" name="pointerSize" min="0" aria-describedby="pointerSize-unit" value="24">
+                      <div class="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none"><span class="text-slate-300 sm:text-xs" id="pointerSize-unit">px</span></div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-400" for="hoveringExpansionRatio">hoveringExpansionRatio</label>
+                    <div class="mt-1 relative rounded-md">
+                      <input class="block w-full border-slate-300 rounded-md focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-xs" id="hoveringExpansionRatio" data-value-picker="hoveringExpansionRatio" type="number" name="hoveringExpansionRatio" min="0" value="2">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-slate-400" for="hoveringBorderWidth">hoveringBorderWidth</label>
+                    <div class="mt-1 relative rounded-md">
+                      <input class="block w-full border-slate-300 rounded-md focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-xs" id="hoveringBorderWidth" data-value-picker="hoveringBorderWidth" type="number" name="hoveringBorderWidth" min="0" value="1">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="mt-12 rounded-lg">
+              <h2 class="text-6xl font-thin mb-8">hover effects sample</h2>
+              <div class="mt-8 p-6 md:py-8 md:px-8 bg-slate-100 rounded-lg">
+                <div class="grid grid-cols-4 gap-4">
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="">No Icon (Default)</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="bxs:cat">Cat</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="akar-icons:heart">Heart</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="ri:zoom-in-line" data-st-icon-animation-name="default">Zoom In</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="fa-solid:arrow-left" data-st-icon-animation-name="toLeft">Left Arrow</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="fa-solid:arrow-up" data-st-icon-animation-name="toTop">Up Arrow</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="fa-solid:arrow-down" data-st-icon-animation-name="toBottom">Down Arrow</button>
+                  <button class="p-2 text-sm bg-white rounded-lg" data-st-target="" data-st-icon-name="fa-solid:arrow-right" data-st-icon-animation-name="toRight">Right Arrow</button>
+                </div>
+              </div>
+              <div class="mt-8">
+                <pre><code class="rounded-lg language-html text-xs text-left">&lt;button data-st-target&gt;No Icon (Default)&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;bxs:cat&quot;&gt;Cat&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;akar-icons:heart&quot;&gt;Heart&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;ri:zoom-in-line&quot;&gt;Zoom In&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;fa-solid:arrow-left&quot; data-st-icon-animation-name=&quot;toLeft&quot;&gt;Left Arrow&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;fa-solid:arrow-up&quot; data-st-icon-animation-name=&quot;toTop&quot;&gt;Up Arrow&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;fa-solid:arrow-down&quot; data-st-icon-animation-name=&quot;toBottom&quot;&gt;Down Arrow&lt;/button&gt;
+&lt;button data-st-target data-st-icon-name=&quot;fa-solid:arrow-right&quot; data-st-icon-animation-name=&quot;toRight&quot;&gt;Right Arrow&lt;/button&gt;</code></pre>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-thin mb-4">Methods</h2>
+            <div class="text-left">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <th><code>MouseStalker.init(opt)</code></th>
+                    <td>Show MouseStalker</td>
+                  </tr>
+                  <tr> 
+                    <th><code>MouseStalker.destroy()</code></th>
+                    <td>Remove MouseStalker </td>
+                  </tr>
+                  <tr> 
+                    <th><code>MouseStalker.update(opt)</code></th>
+                    <td>Update MouseStalker with opt</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-thin mb-8">Options</h2>
+            <div class="text-left">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><code>mouseElementClassName</code></th>
+                    <td><code>string</code></td>
+                    <td><code>mouse-stalker-root</code></td>
+                  </tr>
+                  <tr>
+                    <th><code>pointerElementClassName    </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>mouse-stalker-pointer                  </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>iconTargetElementClassName </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>mouse-stalker-icon-target              </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>pageBaseColor              </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>#ffffff                                </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>pointerColor               </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>rgba(0,0,0,1)                          </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>pointerSize                </code></th>
+                    <td><code>number  </code></td>
+                    <td><code>24                                                                 </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>zIndex                     </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>9999                                   </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>hoveringExpansionRatio     </code></th>
+                    <td><code>number  </code></td>
+                    <td><code>2                                      </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>hoveringBorderWidth</code></th>
+                    <td><code>number  </code></td>
+                    <td><code>1                                      </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>scoped                     </code></th>
+                    <td><code>boolean </code></td>
+                    <td><code>false                                  </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>targetSelectorsDataName    </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>data-st-target              </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>hoveringIconName           </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>data-st-icon-name           </code></td>
+                  </tr>
+                  <tr>
+                    <th><code>hoveringIconAnimationName  </code></th>
+                    <td><code>string  </code></td>
+                    <td><code>data-st-icon-animation-name</code><br><br>(This attribute accepts are <code>toTop</code>, <code>toBottom</code>, <code>toRight</code>, and<code>toLeft</code>)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-thin mb-8">Notes on background color</h2>
+            <div class="text-left">
+              <p>
+                 The <code>mix-blend-mode</code>is used to draw the mouse pointer.
+                Therefore, <code>background-color</code>must be specified in the <code>body</code>tag.
+              </p>
+              <div class="my-4">
+                <pre><code class="rounded-lg language-scss">body {
+  background-color: white; // must be specified
+}</code></pre>
+              </div>
+              <p>
+                 Note that <code>Option.pageBaseColor</code>is output for this background color.</p>
+            </div>
+          </div>
+        </section>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-thin mb-8">Licence</h2>
+            <div class="text-left">
+              <p>
+                 Licensed under MIT license.
+                You are free to use for your personal or commercial projects.
+                However, this program is based on iconify.design and has been extended.
+                Please refer to iconify.design for the license of each icon used internally.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="px-4 py-8 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-6xl font-thin mb-8">Release notes</h2>
+            <div class="text-left">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Version</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> <code>1.0.0</code></td>
+                    <td>Launch</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+    <script type="module" src="../ts/index.ts"></script>
+  <script defer src="./assets/js/index.js"></script></body>
+</html>
